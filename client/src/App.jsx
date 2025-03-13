@@ -5,6 +5,7 @@ import Login from "./pages/Login"
 import Register from "./pages/Register"
 import AdminDashboard from './pages/AdminDashboard';
 import AwarenessCampaign from './pages/AwarenessCampaign';
+import CompliancePage from './pages/Compliance';
 
 const App =() => {
   return (
@@ -16,6 +17,7 @@ const App =() => {
           <Route path="/register" element={<Register />} />
           <Route path="/admindashboard" element={<AdminDashboard />} />
           <Route path="/awarenesscampaign" element={<AwarenessCampaign />} />
+          <Route path="/compliance" element={<CompliancePage />} />
         </Routes>
       </Router>
     </div>
