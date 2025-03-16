@@ -6,6 +6,7 @@ import Register from "./pages/Register"
 import AdminDashboard from './pages/AdminDashboard';
 import AwarenessCampaign from './pages/AwarenessCampaign';
 import CompliancePage from './pages/Compliance';
+import DonorDashboard from './pages/DonorDashboard';
 
 const App =() => {
   return (
@@ -18,6 +19,7 @@ const App =() => {
           <Route path="/admindashboard" element={<AdminDashboard />} />
           <Route path="/awarenesscampaign" element={<AwarenessCampaign />} />
           <Route path="/compliance" element={<CompliancePage />} />
+          <Route path="/donordashboard" element={<DonorDashboard />} />
         </Routes>
       </Router>
     </div>
