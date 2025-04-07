@@ -12,6 +12,8 @@ import GovernmentDashboard from './pages/GovernmentDashboard';
 import HospitalDashboard from './pages/HospitalDashboard';
 import NGODashboard from './pages/NGODashboard';
 import OrganTracking from './pages/OrganTracking';
+import P from './pages/PP';
+import RecipientDashboard from './pages/RecipientDashboard';
 
 const App =() => {
   return (
@@ -30,6 +32,8 @@ const App =() => {
           <Route path="/HospitalDashboard" element={<HospitalDashboard />} />
           <Route path="/NGODashboard" element={<NGODashboard />} />
           <Route path="/OrganTracking" element={<OrganTracking />} />
+          <Route path="/ppp" element={<P />} />
+          <Route path="/ReciepientDashboard" element={<RecipientDashboard />} />
         </Routes>
       </Router>
     </div>
