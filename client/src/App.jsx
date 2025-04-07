@@ -14,6 +14,7 @@ import NGODashboard from './pages/NGODashboard';
 import OrganTracking from './pages/OrganTracking';
 import P from './pages/PP';
 import RecipientDashboard from './pages/RecipientDashboard';
+import ReportingAnalytics from './pages/ReportsAnalytics';
 
 const App =() => {
   return (
@@ -34,6 +35,7 @@ const App =() => {
           <Route path="/OrganTracking" element={<OrganTracking />} />
           <Route path="/ppp" element={<P />} />
           <Route path="/ReciepientDashboard" element={<RecipientDashboard />} />
+          <Route path="/ReportAnalytics" element={<ReportingAnalytics />} />
         </Routes>
       </Router>
     </div>
