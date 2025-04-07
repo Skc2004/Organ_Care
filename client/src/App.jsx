@@ -9,6 +9,7 @@ import CompliancePage from './pages/Compliance';
 import DonorDashboard from './pages/DonorDashboard';
 import FAQ from './pages/FAQ';
 import GovernmentDashboard from './pages/GovernmentDashboard';
+import HospitalDashboard from './pages/HospitalDashboard';
 
 const App =() => {
   return (
@@ -24,6 +25,7 @@ const App =() => {
           <Route path="/donordashboard" element={<DonorDashboard />} />
           <Route path="/FAQ" element={<FAQ />} />
           <Route path="/GovernmentDashboard" element={<GovernmentDashboard />} />
+          <Route path="/HospitalDashboard" element={<HospitalDashboard />} />
         </Routes>
       </Router>
     </div>
