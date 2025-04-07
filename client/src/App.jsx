@@ -15,6 +15,7 @@ import OrganTracking from './pages/OrganTracking';
 import P from './pages/PP';
 import RecipientDashboard from './pages/RecipientDashboard';
 import ReportingAnalytics from './pages/ReportsAnalytics';
+import TermsOfService from './pages/TermsOfService';
 
 const App =() => {
   return (
@@ -36,6 +37,7 @@ const App =() => {
           <Route path="/ppp" element={<P />} />
           <Route path="/ReciepientDashboard" element={<RecipientDashboard />} />
           <Route path="/ReportAnalytics" element={<ReportingAnalytics />} />
+          <Route path="/TOS" element={<TermsOfService />} />
         </Routes>
       </Router>
     </div>
