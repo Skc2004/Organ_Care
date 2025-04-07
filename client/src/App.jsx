@@ -10,6 +10,7 @@ import DonorDashboard from './pages/DonorDashboard';
 import FAQ from './pages/FAQ';
 import GovernmentDashboard from './pages/GovernmentDashboard';
 import HospitalDashboard from './pages/HospitalDashboard';
+import NGODashboard from './pages/NGODashboard';
 
 const App =() => {
   return (
@@ -26,6 +27,7 @@ const App =() => {
           <Route path="/FAQ" element={<FAQ />} />
           <Route path="/GovernmentDashboard" element={<GovernmentDashboard />} />
           <Route path="/HospitalDashboard" element={<HospitalDashboard />} />
+          <Route path="/NGODashboard" element={<NGODashboard />} />
         </Routes>
       </Router>
     </div>
