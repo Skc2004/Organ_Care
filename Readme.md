@@ -1,123 +1,80 @@
-# Organ Care
+# 🫁 Organ Care Management System
 
-Organ Care is a web-based application designed to streamline the process of organ donation and transplantation. It facilitates seamless communication between donors, recipients, and healthcare professionals, ensuring efficient and transparent organ allocation.
+This is a full-stack application built with **React** (frontend via Vite) and **Node.js + MySQL** (backend) to manage and track organ donors, recipients, and transplant procedures efficiently. It ensures transparency, real-time tracking, and accessibility of organ care data for stakeholders like hospitals, NGOs, and government bodies.
 
-## 🚀 Features
+## ⚙️ Technologies Used
 
-* **User Registration & Authentication**: Secure sign-up and login functionalities for donors, recipients, and medical staff.
-* **Organ Listing**: Donors can list available organs with pertinent details.
-* **Organ Request**: Recipients can request specific organs, providing necessary medical information.
-* **Matching System**: An algorithm to match donors and recipients based on compatibility criteria.
-* **Real-time Notifications**: Alerts for users about matching organs, status updates, and messages.
-* **Admin Dashboard**: For healthcare professionals to monitor and manage organ transplants.
-
-## 🛠️ Technologies Used
-
-* **Frontend**: React.js, HTML5, CSS3
-* **Backend**: Node.js, Express.js
-* **Database**: MongoDB
+* **Frontend**: React + Vite
+* **Backend**: Node.js + Express
+* **Database**: MySQL
 * **Authentication**: JWT (JSON Web Tokens)
-* **APIs**: RESTful APIs for client-server communication
+* **CORS & API Communication**: Express Middleware
 
 ## 📁 Project Structure
 
 ```
-Organ_Care/
-├── client/                 # React frontend
-│   ├── public/
-│   └── src/
-│       ├── components/     # Reusable components
-│       ├── pages/          # Page components
-│       ├── services/       # API calls
-│       └── App.js          # Main application file
-├── server/                 # Express backend
-│   ├── controllers/        # Route handlers
-│   ├── models/             # Mongoose schemas
-│   ├── routes/             # API routes
-│   └── server.js           # Entry point
-├── .env                    # Environment variables
-├── package.json            # Project metadata
-└── README.md               # Project documentation
+client/
+├── index.html              # Root HTML file
+├── package.json            # Project metadata and dependencies
+├── vite.config.js          # Vite configuration
+├── server.js               # Node.js backend API and DB integration
+├── eslint.config.js        # ESLint configuration
+├── node_modules/           # Installed dependencies
 ```
 
-## ⚙️ Installation
+## 🚀 Getting Started
 
-1. **Clone the repository**:
+### Prerequisites
 
-   ```bash
-   git clone https://github.com/Skc2004/Organ_Care.git
-   cd Organ_Care
-   ```
+* [Node.js](https://nodejs.org/)
+* [MySQL](https://www.mysql.com/)
 
-2. **Set up the backend**:
+### 1️⃣ Clone & Install Dependencies
 
-   ```bash
-   cd server
-   npm install
-   ```
+```bash
+cd client
+npm install
+```
 
-3. **Set up the frontend**:
+### 2️⃣ Setup MySQL Database
 
-   ```bash
-   cd ../client
-   npm install
-   ```
+Create a MySQL database called `organ_care_db` and set up the necessary tables. Update your DB credentials in `server.js`:
 
-4. **Configure environment variables**:
+```js
+const db = mysql.createPool({
+  host: 'localhost',
+  user: 'root',
+  password: 'your-password',
+  database: 'organ_care_db',
+});
+```
 
-   Create a `.env` file in the `server` directory and add the following:
+### 3️⃣ Run Backend Server
 
-   ```env
-   PORT=5000
-   MONGO_URI=your_mongodb_connection_string
-   JWT_SECRET=your_jwt_secret
-   ```
+```bash
+node server.js
+```
 
-5. **Run the application**:
+### 4️⃣ Run Frontend (Vite Dev Server)
 
-   * **Backend**:
+```bash
+npm run dev
+```
 
-     ```bash
-     cd ../server
-     npm start
-     ```
+The app will be available at: [http://localhost:5173](http://localhost:5173)
 
-   * **Frontend**:
+## 📦 Available Scripts
 
-     ```bash
-     cd ../client
-     npm start
-     ```
+* `npm run dev` – Start the frontend dev server
+* `npm run build` – Build frontend for production
+* `npm run preview` – Preview built app
+* `npm run lint` – Lint the code using ESLint
 
-   The frontend will be available at `http://localhost:3000` and the backend at `http://localhost:5000`.
+## 🔐 Authentication
 
-## 🧪 Testing
-
-To run tests, ensure both the frontend and backend are set up correctly. Then, use the following commands:
-
-* **Backend Tests**:
-
-  ```bash
-  cd server
-  npm test
-  ```
-
-* **Frontend Tests**:
-
-  ```bash
-  cd client
-  npm test
-  ```
-
-## 🤝 Contributing
-
-Contributions are welcome! Please fork the repository and submit a pull request for any enhancements or bug fixes.
+The backend uses **JWT tokens** to secure APIs. Replace `SECRET_KEY` in `server.js` with a secure key for production.
 
 ## 📄 License
 
-This project is licensed under the [MIT License](LICENSE).
-
-## 📬 Contact
-
-For any inquiries or feedback, please contact [Skc2004](https://github.com/Skc2004).
+This project is open source and available under the [MIT License](LICENSE).
 
